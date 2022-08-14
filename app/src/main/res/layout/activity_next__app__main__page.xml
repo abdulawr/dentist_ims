@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Next_Appoimient_Activity.Next_App_Main_Page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:id="@+id/doc_query"
+            android:paddingLeft="10dp"
+            android:hint="Mobile Or ID"
+            android:inputType="number"/>
+
+        <android.widget.Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Search"
+            android:onClick="OnSearchButtonClick"
+            android:layout_marginLeft="15sp"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:layout_weight="0"
+            android:background="@drawable/button_back"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardElevation="7dp"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/patient_infor_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="18sp"
+              android:layout_weight="3"
+              android:textStyle="bold"
+              android:text="Name"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:id="@+id/name"
+              android:layout_marginLeft="5dp"
+              android:textSize="17sp"
+              android:text="Name"/>
+
+      </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:text="Mobile"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/mobile"
+                android:layout_marginLeft="5dp"
+                android:textSize="17sp"
+                android:text="mobile"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:text="Age"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/age"
+                android:layout_marginLeft="5dp"
+                android:textSize="17sp"
+                android:text="age"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:text="Address"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/address"
+                android:layout_marginLeft="5dp"
+                android:textSize="17sp"
+                android:text="address"/>
+
+        </LinearLayout>
+
+        <android.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:visibility="visible"
+            android:text="Create New Appointment"
+            android:textAllCaps="false"
+            android:id="@+id/create_app"
+            android:onClick="OnSearchButtonClick"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:layout_weight="0"
+            android:background="@drawable/button_back"/>
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Not Found"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:id="@+id/error"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Appointments"
+        android:layout_marginTop="15sp"
+        android:textSize="22sp"
+        android:id="@+id/app"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:paddingLeft="12dp"
+        android:layout_gravity="left"
+        android:gravity="left"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/rec"/>
+
+</LinearLayout>

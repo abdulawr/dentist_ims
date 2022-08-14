@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".New_Patient_Activity.Next_Appoinment">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:paddingTop="0dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:progress="90"
+        android:scaleY="2"
+        android:layout_marginTop="-3dp"
+        android:theme="@style/WhiteAccent"
+        android:layout_height="wrap_content" />
+
+     <DatePicker
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/datepicker"
+         android:calendarViewShown="false"
+         android:datePickerMode="spinner"/>
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/addMedician"
+        android:onClick="set_Appoimnet"
+        android:background="@drawable/button_back"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textAllCaps="false"
+        android:text="Set Appointment"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"/>
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="Skip"
+        android:background="@drawable/button_back"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textAllCaps="false"
+        android:text="Skip"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

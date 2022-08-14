@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/top"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/backimages"
+        android:scaleType="fitXY"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#5D6D7A"
+        android:layout_marginBottom="-75dp"
+        android:elevation="20dp"
+        android:layout_gravity="center_horizontal" />
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      app:cardBackgroundColor="#C4FFFFFF"
+      app:cardElevation="8dp"
+      android:layout_margin="15dp"
+      app:cardCornerRadius="10dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="130dp"
+              android:layout_height="120dp"
+              android:layout_marginTop="-50dp"
+              android:layout_gravity="center_horizontal"
+              android:background="@drawable/login_top_backg"/>
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_marginTop="20dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_height="match_parent">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:inputType="number"
+                  android:id="@+id/id"
+                  android:drawableRight="@drawable/id"
+                  android:textColorHint="@color/purple_700"
+                  android:hint="Enter ID" />
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_marginTop="10dp"
+              android:layout_marginLeft="10dp"
+              app:hintTextColor="@color/purple_700"
+              android:background="@color/white"
+              android:layout_marginRight="10dp"
+              android:layout_height="match_parent">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableRight="@drawable/passicon"
+                  android:background="@color/white"
+                  android:id="@+id/pass"
+                  android:inputType="textPassword"
+                  android:hint="Password" />
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <com.google.android.material.checkbox.MaterialCheckBox
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Keep me login"
+              android:layout_marginLeft="10dp"
+              android:layout_marginTop="20dp"/>
+
+
+          <Button
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:text="Login"
+              android:layout_marginTop="20dp"
+              android:textSize="18sp"
+              android:onClick="LogIn"
+              android:background="@drawable/button_back"
+              android:layout_marginBottom="50dp"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"/>
+
+
+
+      </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="150dp"
+            android:text="Forgot Password"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:onClick="ForgotPassword"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="-40dp"
+            android:textSize="17dp"
+            android:elevation="8dp"
+            android:background="@drawable/gradient"/>
+
+    </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+</FrameLayout>

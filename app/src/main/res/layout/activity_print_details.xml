@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".New_Patient_Activity.PrintDetails">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:paddingTop="0dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:progress="99"
+        android:scaleY="2"
+        android:layout_marginTop="-3dp"
+        android:theme="@style/WhiteAccent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Print Report"
+        android:onClick="Generate_PDF"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_back"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"/>
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Done"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:onClick="Done"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="#4CAF50"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

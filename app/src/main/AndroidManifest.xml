@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ss_technology.dims">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" ></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" ></uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" ></uses-permission>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DIMS">
+
+        <activity android:name=".Next_Appoimient_Activity.View_Appoiment_Details"/>
+        <receiver android:name=".Services.AlarmReceiver"/>
+        <activity
+            android:name=".Next_Appoimient_Activity.Next_App_Main_Page"
+            android:label="Search Patients" />
+        <service android:name=".Services.SendingAppoimentMessage"/>
+        <activity
+            android:name=".New_Patient_Activity.PrintDetails"
+            android:label="Print Report" />
+        <activity
+            android:name=".New_Patient_Activity.Next_Appoinment"
+            android:label="Appointment" />
+        <activity
+            android:name=".New_Patient_Activity.Treatment_Plan"
+            android:label="Treatment Plan" />
+        <activity
+            android:name=".New_Patient_Activity.PatientDiseaseDetails"
+            android:label="Patient Details" />
+        <activity
+            android:name=".New_Patient_Activity.New_Patient"
+            android:label="New Patient" />
+        <activity
+            android:name=".Activities.SignUp"
+            android:theme="@style/Theme.DIMS.Basit" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DIMS.NoActionBar" />
+        <activity
+            android:name=".Activities.Login"
+            android:theme="@style/Theme.DIMS.Basit" />
+        <activity
+            android:name=".Activities.SplashScreen"
+            android:theme="@style/Theme.DIMS.Basitss">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
